@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "package": "com.github.hespercq.fastprojectilefix.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "fastprojectilefix.refmap.json",
+  "mixins": [
+	"MixinClientboundSetEntityMotionPacket"
+  ],
+  "minVersion": "0.8"
+}
