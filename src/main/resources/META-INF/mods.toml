@@ -10,3 +10,5 @@ authors="${mod_authors}"
 
 description="${mod_description}"
 
+[[mixins]]
+config="fastprojectilefix.mixins.json"
