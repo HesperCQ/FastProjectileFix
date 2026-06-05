@@ -12,13 +12,9 @@ import net.minecraft.world.phys.Vec3;
 @Mixin(ClientboundSetEntityMotionPacket.class)
 public class MixinClientboundSetEntityMotionPacket {
 
-	@Inject(method = "<init>(ILnet/minecraft/world/phys/Vec3;)V", at = @At("HEAD"))
-	private void test(int id, Vec3 deltaMovement, CallbackInfo ci) {
-		System.out.println("MIXIN WORKS");
-	}
-
 	@Redirect(method = "<init>(ILnet/minecraft/world/phys/Vec3;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Mth;clamp(DDD)D"))
 	private double removeClamp(double value, double min, double max) {
+		System.out.println("MIXIN CLAMP: " + value);
 		return value; // just return the original value, no clamping
 	}
 
