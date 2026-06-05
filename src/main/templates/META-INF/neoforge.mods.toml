@@ -1,0 +1,18 @@
+modLoader="javafml" #mandatory
+loaderVersion="${loader_version_range}" #mandatory
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+logoFile = "logo.png"
+authors="HesperCQ"
+description="""
+Fixes client side rendering of fast moving projectiles / entities.
+Port of seestarz's Fast Projectile Fix (fastprojectilefix).
+"""
+
+[[mixins]]
+config="fastprojectilefix.mixins.json"
+
